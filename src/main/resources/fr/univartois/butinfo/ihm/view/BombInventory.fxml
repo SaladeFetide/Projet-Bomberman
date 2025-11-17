@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<HBox spacing="20" xmlns:fx="http://javafx.com/fxml" fx:controller="fr.univartois.butinfo.ihm.controller.BombInventoryController">
+    <ListView fx:id="bombListView" prefWidth="200" />
+    <VBox spacing="10" alignment="TOP_LEFT">
+        <Label text="Nom :" />
+        <Label fx:id="bombName" style="-fx-font-weight: bold;" />
+        <Label text="Description :" />
+        <Label fx:id="bombDescription" wrapText="true" maxWidth="250"/>
+        <ImageView fx:id="bombImage" fitWidth="64" fitHeight="64" />
+        <HBox spacing="10">
+            <Button fx:id="validateButton" text="Valider" />
+            <Button fx:id="cancelButton" text="Annuler" />
+        </HBox>
+    </VBox>
+</HBox>

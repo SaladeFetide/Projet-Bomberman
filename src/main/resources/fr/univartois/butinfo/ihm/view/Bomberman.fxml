@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Insets?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml" fx:controller="fr.univartois.butinfo.ihm.controller.BombermanController"
+           style="-fx-background-image: url('../../../../../images/castle.png'); -fx-background-size: cover;">
+    <!-- Contenu principal -->
+    <BorderPane>
+        <center>
+            <VBox spacing="10" alignment="CENTER">
+                <GridPane fx:id="gameGrid" hgap="0" vgap="0" alignment="CENTER" />
+                <GridPane fx:id="inventoryGrid" hgap="5" vgap="5" alignment="CENTER" />
+                
+            </VBox>
+        </center>
+
+        <top>
+            <VBox spacing="10" alignment="CENTER">
+                <!-- Ajout du titre -->
+                <Label text="Bomberman !" style="-fx-font-size: 36px; -fx-font-weight: bold; -fx-text-fill: lightgray;" />
+                <HBox spacing="10" alignment="CENTER" style="-fx-background-color: lightgray;">
+                    <padding>
+                        <Insets top="10" right="10" bottom="10" left="10" />
+                    </padding>
+                    <Label text="Points de vie :" />
+                    <Label fx:id="playerLives" text="3" />
+                    <Label text="Bombes restantes :" />
+                    <Label fx:id="bombsLeft" text="5" />
+                </HBox>
+            </VBox>
+        </top>
+
+        <bottom>
+            <HBox spacing="10" alignment="CENTER" style="-fx-background-color: lightgray;">
+                <padding>
+                    <Insets top="10" right="10" bottom="10" left="10" />
+                </padding>
+                <Button fx:id="restartButton" text="Redémarrer" focusTraversable="false" />
+                <Button fx:id="inventoryButton" text="Inventaire" focusTraversable="false" />
+            </HBox>
+        </bottom>
+    </BorderPane>
+</StackPane>
